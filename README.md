@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Word Hunt
+Word Hunt Is A Dictionary App Uses React And [FreeDictionaryApi](https://dictionaryapi.dev)
 
 ## Available Scripts
 
