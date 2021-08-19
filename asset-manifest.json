@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/word-hunt-react/static/css/main.4c8d6eec.chunk.css",
+    "main.js": "/word-hunt-react/static/js/main.fbd95755.chunk.js",
+    "main.js.map": "/word-hunt-react/static/js/main.fbd95755.chunk.js.map",
+    "runtime-main.js": "/word-hunt-react/static/js/runtime-main.94d03b52.js",
+    "runtime-main.js.map": "/word-hunt-react/static/js/runtime-main.94d03b52.js.map",
+    "static/js/2.ec1787f1.chunk.js": "/word-hunt-react/static/js/2.ec1787f1.chunk.js",
+    "static/js/2.ec1787f1.chunk.js.map": "/word-hunt-react/static/js/2.ec1787f1.chunk.js.map",
+    "index.html": "/word-hunt-react/index.html",
+    "static/css/main.4c8d6eec.chunk.css.map": "/word-hunt-react/static/css/main.4c8d6eec.chunk.css.map",
+    "static/js/2.ec1787f1.chunk.js.LICENSE.txt": "/word-hunt-react/static/js/2.ec1787f1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94d03b52.js",
+    "static/js/2.ec1787f1.chunk.js",
+    "static/css/main.4c8d6eec.chunk.css",
+    "static/js/main.fbd95755.chunk.js"
+  ]
+}
