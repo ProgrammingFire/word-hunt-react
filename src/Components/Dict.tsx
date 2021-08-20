@@ -25,17 +25,17 @@ export const Dict: React.FC = () => {
   const [lang, setLang] = useState<String | null>("en");
 
   const fetchData: Function = async () => {
-    if (word === "") {
-      return;
-    } else {
-      try {
-        const data = await axios.get(
-          `https://api.dictionaryapi.dev/api/v2/entries/${lang}/${word}`
-        );
-        setMeanings(data.data);
-      } catch (error) {
-        console.error(error);
-      }
+    try {
+      const data = await axios.get(
+        `https://api.dictionaryapi.dev/api/v2/entries/${lang}/${word}`
+      );
+      // if (data.status === 404) {
+      // setMeanings(null);
+      // } else {
+      setMeanings(data.data);
+      // }
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -67,28 +67,31 @@ export const Dict: React.FC = () => {
           </MenuItem>
         ))}
       </TextField>
-      {meanings.map((meaning: any | string) => (
-        <>
-          <Typography variant="h3" style={{ margin: 16 }}>
-            {meaning.word.toUpperCase()}
-          </Typography>
-          {meaning.meanings.map((wordMeanings: any | Object, index: any) => (
-            <List style={{ textAlign: "center" }} key={index}>
-              <Typography variant="h4">
-                {wordMeanings.partOfSpeech.toUpperCase()}
-              </Typography>
-              {wordMeanings.definitions.map((wordDef: any | [], index: any) => (
-                <>
-                  <ListItem style={{ textAlign: "center" }} key={index}>
-                    <ListItemText>{wordDef.definition}</ListItemText>
-                  </ListItem>
-                  <Divider />
-                </>
-              ))}
-            </List>
-          ))}
-        </>
-      ))}
+      {meanings !== null &&
+        meanings.map((meaning: any | string) => (
+          <>
+            <Typography variant="h3" style={{ margin: 16 }}>
+              {meaning.word}
+            </Typography>
+            {meaning.meanings.map((wordMeanings: any | Object, index: any) => (
+              <List style={{ textAlign: "center" }} key={index}>
+                <Typography variant="h4">
+                  {wordMeanings.partOfSpeech}
+                </Typography>
+                {wordMeanings.definitions.map(
+                  (wordDef: any | [], index: any) => (
+                    <>
+                      <ListItem style={{ textAlign: "center" }} key={index}>
+                        <ListItemText>{wordDef.definition}</ListItemText>
+                      </ListItem>
+                      <Divider />
+                    </>
+                  )
+                )}
+              </List>
+            ))}
+          </>
+        ))}
     </div>
   );
 };
