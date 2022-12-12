@@ -1,5 +1,5 @@
 # Word Hunt
-Word Hunt Is A Dictionary App Uses React And [FreeDictionaryApi](https://dictionaryapi.dev)
+Word Hunt Is A Dictionary App that uses React And [FreeDictionaryApi](https://dictionaryapi.dev)
 
 ## Available Scripts
 
